@@ -1,0 +1,61 @@
+\documentclass[a4paper,11pt, leqno]{article}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{mathtools}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english, dutch]{babel}
+\usepackage{tikz}
+\usepackage{color}
+\usepackage{amsthm}
+\usepackage[ruled]{algorithm}% http://ctan.org/pkg/algorithms
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[nodayofweek,level]{datetime}
+\usepackage[section]{placeins} 
+
+\setcounter{equation}{-1}
+\title{Coxeter's Rabbit}
+\author{Edsger W. Dijkstra}
+\date{}
+\begin{document}
+\maketitle
+ On p.13 of his "Introduction to Geometry", H.S.M Coxeter invites the reader to see (and to use spontaneously) that with $s = (a+b+c)/2$, $abc$ equals
+\begin{equation}
+s(s-b)(s-c) + s(s-c)(s-a) + s(s-a)(s-b) - (s-a)(s-b)(s-c)
+\end{equation}
+\underline{Proof}
+\begin{align}
+\begin{aligned}[t]
+s(s-b)(s-c) + s(s-c)(s-a) &= s(s-c)(2s - a-b)  &\text{\{algebra\}}\\
+&= s(s-c)c  &\text{\{definition of }s\}
+\end{aligned}
+\end{align}
+
+\begin{align}
+\begin{aligned}[t]
+s(s-a)(s-b) - (s-a)(s-b)(s-c) &= (s-a)(s-b)c  &\text{\{algebra\}}
+\end{aligned}
+\end{align}
+Because both expression $(1)$ and $(2)$ contain a factor $c$, so does $(0)$; for reasons of symmetry, $(0)$ also contains factors $a$ and $b$, i.e. is a multiple of $abc$. The c\"oefficient equals $1$ -as is trivially established with, say, $a,b,c := 2,2,2$- and thus $abc = (0)$ has been proved.
+
+\begin{flushright}
+(End of Proof)\\[4pt]
+
+Nuenan, 14 April 2002
+\end{flushright}
+
+Prof. Dr. Edsger W. Dijkstra
+
+Plantaanstraat 5
+
+5671 AL NUENEN
+
+The Netherlands
+
+\end{document}
